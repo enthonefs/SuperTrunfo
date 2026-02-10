@@ -1,45 +1,30 @@
 #include <stdio.h>
 
 int main() {
-    char estado;
-    char codigo[4];
-    char nome[50];
-    long int populacao;
-    float area;
-    float pib;
-    int pontosTuristicos;
+    char estado1[3] = "SP";
+    char codigo1[5] = "ABPQ";
+    char nome1[50] = "Sao Paulo";
+    long int populacao1 = 110000;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
 
-    printf("Estado: ");
-    scanf(" %c", &estado);
+    char estado2[3] = "PE";
+    char codigo2[5] = "AQMW";
+    char nome2[50] = "Recife";
+    long int populacao2 = 20000;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
 
-    printf("Codigo: ");
-    scanf("%s", codigo);
+    if (populacao1 > populacao2) {
+    printf("%s venceu! População: %ld\n", nome1, populacao1);
+    } else if (populacao1 < populacao2) {
+    printf("%s venceu! População: %ld\n", nome2, populacao2);
+    } else {
+    printf("Empate! Ambos têm população: %ld\n", populacao1);
+    }
 
-    getchar();
-
-    printf("Nome da cidade: ");
-    fgets(nome, sizeof(nome), stdin);
-
-    printf("Populacao: ");
-    scanf("%ld", &populacao);
-
-    printf("Area: ");
-    scanf("%f", &area);
-
-    printf("PIB: ");
-    scanf("%f", &pib);
-
-    printf("Pontos turisticos: ");
-    scanf("%d", &pontosTuristicos);
-
-    printf("\n--- Carta da Cidade ---\n");
-    printf("Estado: %c\n", estado);
-    printf("Codigo: %s\n", codigo);
-    printf("Cidade: %s\n", nome);
-    printf("Populacao: %ld\n", populacao);
-    printf("Area: %.2f km²\n", area);
-    printf("PIB: %.2f bilhoes\n", pib);
-    printf("Pontos Turisticos: %d\n", pontosTuristicos);
 
     return 0;
 }
